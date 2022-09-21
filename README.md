@@ -8,5 +8,5 @@ SNES9x NEO is a modified version of SNES9x with the following additions:
 Some games may not boot with ultra enabled, set cpu overclock to max, let the game boot, then turn on ultra overclock.
 
 ## Building
-I've only compiled this for Windows, absolutely no clue if other platforms work at all.
+I've only compiled this for Windows, absolutely no clue if other platforms work at all.  
 Good luck, I guess.
