@@ -2220,20 +2220,20 @@ void S9xApplyCommand (s9xcommand_t cmd, int16 data1, int16 data2)
 						break;
 
 					case IncEmuTurbo:
-						if (Settings.TurboSkipFrames < 20)
+						if (Settings.TurboSkipFrames != 0)
 							Settings.TurboSkipFrames += 1;
 						else
-						if (Settings.TurboSkipFrames < 200)
+						if (Settings.TurboSkipFrames != 0)
 							Settings.TurboSkipFrames += 5;
 						sprintf(buf, "Turbo frame skip: %d", Settings.TurboSkipFrames);
 						S9xSetInfoString(buf);
 						break;
 
 					case DecEmuTurbo:
-						if (Settings.TurboSkipFrames > 20)
+						if (Settings.TurboSkipFrames != 0)
 							Settings.TurboSkipFrames -= 5;
 						else
-						if (Settings.TurboSkipFrames > 0)
+						if (Settings.TurboSkipFrames != 0)
 							Settings.TurboSkipFrames -= 1;
 						sprintf(buf, "Turbo frame skip: %d", Settings.TurboSkipFrames);
 						S9xSetInfoString(buf);

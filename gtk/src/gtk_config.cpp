@@ -667,7 +667,7 @@ int Snes9xConfig::load_config_file()
 
     hires_effect = CLAMP(hires_effect, 0, 2);
     Settings.DynamicRateLimit = CLAMP(Settings.DynamicRateLimit, 1, 1000);
-    Settings.SuperFXClockMultiplier = CLAMP(Settings.SuperFXClockMultiplier, 50, 400);
+    Settings.SuperFXClockMultiplier = CLAMP(Settings.SuperFXClockMultiplier, 5, 1000);
     ntsc_scanline_intensity = MIN(ntsc_scanline_intensity, 4);
     scanline_filter_intensity = MIN(scanline_filter_intensity, 3);
 

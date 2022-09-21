@@ -12,7 +12,8 @@
 //#define MY_REG_KEY   "Software\\Emulators\\Snes9x"
 //#define REG_KEY_VER  "1.31"
 
-#define DISCLAIMER_TEXT        TEXT("Snes9x v%s for Windows.\r\n\
+#define DISCLAIMER_TEXT        TEXT("Snes9x NEO for Windows.\r\n\
+MODIFIED BY SUNLIT & CHROMIUS, SUPERFX OVERCLOCK LIMIT IS NOW FROM 1 UP TO 20,000, ULTRA CPU OVERCLOCK SETTING ADDED.\r\n\
 (c) Copyright 1996 - 2002  Gary Henderson and Jerremy Koot (jkoot@snes9x.com)\r\n\
 (c) Copyright 2002 - 2004  Matthew Kendora\r\n\
 (c) Copyright 2002 - 2005  Peter Bortas\r\n\

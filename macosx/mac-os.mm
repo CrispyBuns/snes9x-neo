@@ -3409,17 +3409,6 @@ void QuitWithFatalError ( NSString *message)
     return inputDelegate;
 }
 
-@dynamic cheatsEnabled;
-- (BOOL)cheatsEnabled
-{
-	return Cheat.enabled;
-}
-
-- (void)setCheatsEnabled:(BOOL)cheatsEnabled
-{
-	Cheat.enabled = cheatsEnabled;
-}
-
 @end
 
 @implementation S9xJoypad

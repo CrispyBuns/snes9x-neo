@@ -177,8 +177,6 @@ extern id<S9xInputDelegate> inputDelegate;
 
 @property (nonatomic, weak) id<S9xInputDelegate> inputDelegate;
 
-@property (nonatomic, assign) BOOL cheatsEnabled;
-
 - (void)recreateS9xView;
 
 - (void)start;

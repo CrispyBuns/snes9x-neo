@@ -703,6 +703,10 @@ void WinPostLoad(ConfigFile& conf)
             Settings.OneSlowClockCycle = 4;
             Settings.TwoClockCycles = 6;
             break;
+		case 4:
+			Settings.OneClockCycle = 1;
+			Settings.OneSlowClockCycle = 1;
+			Settings.TwoClockCycles = 1;
     }
 
 	ConfigFile::SetNiceAlignment(niceAlignment);
@@ -935,7 +939,7 @@ void WinRegisterConfigItems()
 #undef ADDN
 #undef CATEGORY
 #define	CATEGORY "Hack"
-    AddUIntC("CPUOverclockMode", Settings.OverclockMode, 0, "CPU Overclock: 0=none, 1=min, 2=medium, 3=max");
+    AddUIntC("CPUOverclockMode", Settings.OverclockMode, 0, "CPU Overclock: 0=none, 1=min, 2=medium, 3=max, 4=ultra");
     AddUIntC("MaxSpriteTilesPerLine", Settings.MaxSpriteTilesPerLine, 34, "Max sprite tiles rendered per line. Default = 34, Unlimited ~= 128");
 	AddUIntC("SuperFXClockMultiplier", Settings.SuperFXClockMultiplier, 100, "SuperFX speed, in percent (default 100)");
     AddBoolC("SeparateEchoBuffer", Settings.SeparateEchoBuffer, false, "Separate echo buffer from APU ram. For old hacks only.");

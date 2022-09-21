@@ -262,7 +262,7 @@ void S9xLoadConfigFiles (char **argv, int argc)
 
 	Settings.BSXBootup                  =  conf.GetBool("Settings::BSXBootup",                 false);
 	Settings.TurboMode                  =  conf.GetBool("Settings::TurboMode",                 false);
-	Settings.TurboSkipFrames            =  conf.GetUInt("Settings::TurboFrameSkip",            15);
+	Settings.TurboSkipFrames            =  conf.GetUInt("Settings::TurboFrameSkip",            70);
 	Settings.MovieTruncate              =  conf.GetBool("Settings::MovieTruncateAtEnd",        false);
 	Settings.MovieNotifyIgnored         =  conf.GetBool("Settings::MovieNotifyIgnored",        false);
 	Settings.WrongMovieStateProtection  =  conf.GetBool("Settings::WrongMovieStateProtection", true);

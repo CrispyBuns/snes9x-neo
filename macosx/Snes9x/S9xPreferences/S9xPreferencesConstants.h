@@ -38,6 +38,4 @@ extern NSString * const kAllowInvalidVRAMAccessPref;
 extern NSString * const kSeparateEchoBufferFromRAMPref;
 extern NSString * const kDisableSpriteLimitPref;
 
-extern NSString * const kEnableCheatsPref;
-
 NS_ASSUME_NONNULL_END

@@ -5204,7 +5204,7 @@ INT_PTR CALLBACK DlgEmulatorHacksProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM
     {
     case WM_INITDIALOG:
 
-        SendDlgItemMessage(hDlg, IDC_SFX_CLOCK_SPEED_SPIN, UDM_SETRANGE, 0, MAKELPARAM((short)400, (short)50));
+        SendDlgItemMessage(hDlg, IDC_SFX_CLOCK_SPEED_SPIN, UDM_SETRANGE, 0, MAKELPARAM((short)20000, (short)1));
         SendDlgItemMessage(hDlg, IDC_SFX_CLOCK_SPEED_SPIN, UDM_SETPOS, 0, Settings.SuperFXClockMultiplier);
         SendDlgItemMessage(hDlg, IDC_SFX_CLOCK_SPEED_SPIN, UDM_SETACCEL, 1, (LPARAM)&accel);
 
@@ -5212,6 +5212,7 @@ INT_PTR CALLBACK DlgEmulatorHacksProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM
         SendDlgItemMessage(hDlg, IDC_CPU_OVERCLOCK, CB_ADDSTRING, 0, (LPARAM)TEXT("Low"));
         SendDlgItemMessage(hDlg, IDC_CPU_OVERCLOCK, CB_ADDSTRING, 0, (LPARAM)TEXT("Medium"));
         SendDlgItemMessage(hDlg, IDC_CPU_OVERCLOCK, CB_ADDSTRING, 0, (LPARAM)TEXT("Max"));
+        SendDlgItemMessage(hDlg, IDC_CPU_OVERCLOCK, CB_ADDSTRING, 0, (LPARAM)TEXT("Ultra"));
         SendDlgItemMessage(hDlg, IDC_CPU_OVERCLOCK, CB_SETCURSEL, Settings.OverclockMode, 0);
 
         SendDlgItemMessage(hDlg, IDC_SOUND_INTERPOLATION, CB_ADDSTRING, 0, (LPARAM)TEXT("None"));
@@ -5272,6 +5273,11 @@ INT_PTR CALLBACK DlgEmulatorHacksProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM
                 Settings.OneClockCycle = 3;
                 Settings.OneSlowClockCycle = 4;
                 Settings.TwoClockCycles = 6;
+                break;
+            case 4:
+                Settings.OneClockCycle = 1;
+                Settings.OneSlowClockCycle = 1;
+                Settings.TwoClockCycles = 1;
                 break;
             }
 
