@@ -187,12 +187,12 @@ int Snes9xConfig::load_defaults()
     NetPlay.Paused = false;
     NetPlay.MaxFrameSkip = 10;
     Settings.DisplayPressedKeys = false;
-#ifdef ALLOW_CPU_OVERCLOCK
+//#ifdef ALLOW_CPU_OVERCLOCK
     Settings.MaxSpriteTilesPerLine = 34;
     Settings.OneClockCycle = 6;
     Settings.OneSlowClockCycle = 8;
     Settings.TwoClockCycles = 12;
-#endif
+//#endif
 
     for (auto &joypad : pad)
     {
@@ -617,9 +617,10 @@ int Snes9xConfig::load_config_file()
 
     if (OverclockCPU)
     {
-        Settings.OneClockCycle = 4;
-        Settings.OneSlowClockCycle = 5;
-        Settings.TwoClockCycles = 6;
+        // TODO: make dropdown options like windows
+        Settings.OneClockCycle = 1;
+        Settings.OneSlowClockCycle = 1;
+        Settings.TwoClockCycles = 1;
     }
     else
     {
@@ -628,7 +629,7 @@ int Snes9xConfig::load_config_file()
         Settings.TwoClockCycles = 12;
     }
 
-#ifndef ALLOW_CPU_OVERCLOCK
+/*#ifndef ALLOW_CPU_OVERCLOCK
     Settings.OneClockCycle = 6;
     Settings.OneSlowClockCycle = 8;
     Settings.TwoClockCycles = 12;
@@ -636,7 +637,7 @@ int Snes9xConfig::load_config_file()
     Settings.SeparateEchoBuffer = false;
     Settings.InterpolationMethod = 2;
     Settings.BlockInvalidVRAMAccessMaster = true;
-#endif
+#endif*/
 
     if (default_esc_behavior != ESC_TOGGLE_MENUBAR)
         fullscreen = false;
@@ -667,7 +668,7 @@ int Snes9xConfig::load_config_file()
 
     hires_effect = CLAMP(hires_effect, 0, 2);
     Settings.DynamicRateLimit = CLAMP(Settings.DynamicRateLimit, 1, 1000);
-    Settings.SuperFXClockMultiplier = CLAMP(Settings.SuperFXClockMultiplier, 5, 1000);
+    Settings.SuperFXClockMultiplier = CLAMP(Settings.SuperFXClockMultiplier, 1, 20000);
     ntsc_scanline_intensity = MIN(ntsc_scanline_intensity, 4);
     scanline_filter_intensity = MIN(scanline_filter_intensity, 3);
 

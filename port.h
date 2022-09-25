@@ -160,12 +160,12 @@ void SetInfoDlgColor(unsigned char, unsigned char, unsigned char);
 #endif
 
 #ifdef __linux
-#define TITLE "Snes9x: Linux"
+#define TITLE "Snes9x NEO: Linux"
 #define SYS_CONFIG_FILE "/etc/snes9x/snes9x.conf"
 #endif
 
 #ifndef TITLE
-#define TITLE "Snes9x"
+#define TITLE "Snes9x NEO"
 #endif
 
 #if defined(__i386__) || defined(__i486__) || defined(__i586__) || defined(__i686__) || defined(__x86_64__) || defined(__alpha__) || defined(__MIPSEL__) || defined(_M_IX86) || defined(_M_X64) || defined(_XBOX1) || defined(__arm__) || defined(ANDROID) || defined(__aarch64__) || (defined(__BYTE_ORDER__) && __BYTE_ORDER == __ORDER_LITTLE_ENDIAN__)
