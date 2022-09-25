@@ -604,9 +604,10 @@ void Snes9xPreferences::get_settings_from_dialog()
 //#ifdef ALLOW_CPU_OVERCLOCK
     if (get_check("cpu_overclock"))
     {
-        Settings.OneClockCycle = 4;
-        Settings.OneSlowClockCycle = 5;
-        Settings.TwoClockCycles = 6;
+        // TODO: make dropdown options like windows
+        Settings.OneClockCycle = 1;
+        Settings.OneSlowClockCycle = 1;
+        Settings.TwoClockCycles = 1;
     }
     else
     {
